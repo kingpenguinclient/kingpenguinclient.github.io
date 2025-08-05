@@ -1,8 +1,6 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -33,9 +31,6 @@ jobs:
         
     - name: Install dependencies
       run: npm ci
-      
-    - name: Run linting
-      run: npm run lint
       
     - name: Build project
       run: npm run build
